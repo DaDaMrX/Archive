@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html style="height:100%">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>答题顺序</title>
+    <meta charset="utf-8" />
+    <script src="jquery-2.2.3.js"></script>
+    <link href="bootstrap.css" rel="stylesheet" />
+    <style>
+        .container {
+            display: table;
+            height: 100%;
+        }
+
+        .row {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        .big {
+            font-size: 65px;
+        }
+        .big2{
+            color:dodgerblue;
+            font-size:70px
+        }
+        .bigbig{
+            font-size:110px;
+        }
+        .btn {
+            font-size:xx-large;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            right: 70px;
+            font-size: 25px;
+        }
+    </style>
+
+</head>
+<body class="container" style="background-color:antiquewhite">
+    <div class="row">
+        <p class="big">Round</p>
+        <p class="big2" id="roundNumber">0</p>
+        <br />
+        <p id="random" class="bigbig">1 2 3 4 5 6 7 8 9</p>
+        <br />
+        <br />
+        <div id="btnDiv" class="big">
+            <button onclick="run()" class="btn btn-success" >START</button>
+            <button onclick="stop()" class="btn btn-danger">STOP</button>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="footer">
+            <img src="avator.jpg" style="height:50px; width:50px" />
+            <p>By DaDa</p>
+        </div>
+    </div>
+    <script>
+        var counter = 0;
+        var int;
+        function RNG(n) {
+            var arr = [];
+            for (var i = 1; i <= n; i++) arr.push(i);
+            var res = [];
+            for (var i = 0, len = arr.length; i < len; i++) {
+                var j = Math.floor(Math.random() * arr.length);
+                res.push(arr[j]);
+                arr.splice(j, 1);
+            }
+            return res;
+        }
+        function go() {
+            var arr = RNG(9);
+            var str = "";
+            for (var i = 0; i <= 7; i++) str = str + String(arr[i]) + ' ';
+            str = str + arr[8];
+            return str;
+        }
+        function run() {
+            int = setInterval('$("#random").text(go())', 35);
+        }
+        function stop() {
+            $("#roundNumber").text(++counter);
+            clearInterval(int);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+﻿body {
+    background-color: rgb(247, 250, 252);
+}
+
+.frame {
+    margin-bottom: 50px;
+}
+
+.head {
+    margin-top: 40px;
+}
+
+h1 {
+    font-family: "Arial Rounded MT Bold";
+    font-size:480%;
+    font-weight: bold;
+    color: rgb(15, 136, 235);
+    text-shadow: 2px 2px 0px rgb(194, 199, 209);
+}
+
+.side-block {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.side {
+    position: fixed;
+    left: 7%;
+}
+
+.greeting {
+    color: darkorange;
+    font-size: 160%;
+    font-weight: bold;
+}
+
+.time {
+    margin-top: 100px;
+    font-size: 108%;
+    border: 1px solid;
+    padding: 8px;
+}
+
+fieldset {
+    margin-bottom: 5px;
+}
+
+form {
+    font-size: 120%;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.question {
+    margin-bottom: 30px;
+}
+
+legend {
+    font-size: 150%;
+    color: rgb(104, 189, 77);
+}
+
+.button-left {
+    margin-right: 30px;
+}
+
+.button-right {
+    margin-left: 30px;
+    margin-right: 100px;
+}
+
+.btn{
+    width: 90px;
+}

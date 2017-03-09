@@ -1,0 +1,23 @@
+﻿<%set conn=Server.CreateObject("ADODB.Connection")
+    conn.Provider="Microsoft.Jet.OLEDB.4.0"
+    conn.Open(Server.Mappath("score.mdb"))
+
+    name = request.form("name")
+    score = request.form("score")
+
+    set rs = Server.CreateObject("ADODB.recordset")
+    set rs = Server.CreateObject("ADODB.recordset")
+    rs.Open "SELECT * FROM score", conn
+
+    do until rs.EOF
+        for each x in rs.Fields
+            Response.Write(x.name)
+            Response.Write(" = ")
+            Response.Write(x.value & "<br>")
+        next
+        Response.Write("<br>")
+        rs.MoveNext
+    loop
+        
+    rs.close
+    conn.close%>

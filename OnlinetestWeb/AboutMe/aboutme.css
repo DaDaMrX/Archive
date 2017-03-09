@@ -1,0 +1,108 @@
+body {
+    font-size: 110%;
+    background-color: aliceblue;
+}
+
+.frame {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.dada{
+    font-family: SimHei, "Microsoft YaHei";
+    font-size: 300%;
+}
+
+.name {
+    text-align:center;
+}
+
+h1 {
+    font-size: 300%;
+}
+
+h2 {
+    font-family: "Microsoft YaHei";
+    font-weight: normal;
+    font-size: 150%;
+}
+
+h3 {
+    font-family: arial;
+    font-size: 130%;
+}
+
+.left {
+    position: fixed;
+}
+
+.left2 {
+    width: 25%;
+
+}
+
+.description{
+    font-family: Arial;
+    color: darkolivegreen;
+    text-align:left;
+    line-height: 30px;
+}
+
+span {
+    font-weight: bold;
+    color: coral;
+}
+
+.movie{
+    width: 200px;
+    margin: auto;
+    text-align:center;
+}
+
+.txt{
+    font-family: Calibri;
+    font-size: 125%;
+}
+
+li{
+    font-family:Calibri;
+    font-size:130%;
+    line-height:30px;
+}
+
+a:link {
+    text-decoration:none;
+    color: red;
+}
+
+a:visited {
+    color: mediumpurple;
+}
+
+a:hover {
+    text-decoration: underline;
+    font-size: 110%;
+    color: darkorange;
+}
+
+a:active {
+    color: blue;
+}
+
+.footer {
+    margin-top: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.btn {
+    width: 310px;
+    height: 80px;
+    background-color: lightblue;
+    font-size: 150%;
+    font-weight: bold;
+    border-radius: 10px;
+    font-family: "Microsoft YaHei UI";
+}

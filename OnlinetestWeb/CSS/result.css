@@ -1,0 +1,47 @@
+﻿body {
+    background-color: rgb(247, 250, 252);
+}
+
+.container{
+    margin-bottom: 50px;
+}
+
+.head {
+    margin-top: 40px;
+}
+
+h1 {
+    font-family: "Arial Rounded MT Bold";
+    font-size:450%;
+    font-weight: bold;
+    color: rgb(15, 136, 235);
+    text-shadow: 2px 2px 0px rgb(194, 199, 209);
+}
+
+h2{
+    margin-top: 50px;
+    font-size: 350%;
+    color: rgb(104, 189, 77);
+    font-weight: bold;
+}
+
+.table-responsive {
+    margin-top: 10px;
+    margin-bottom: 30px;    
+}
+
+th{
+    text-align: center;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.user {
+    font-size: 120%;
+}
+
+.viewall {
+    font-size: 110%;
+}
