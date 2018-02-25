@@ -1,0 +1,72 @@
+/*******************************************************************************
+ * C++ Compile And Run Task in VS Code for ACMer
+ * File:          task.json
+ * Location:      ${workspaceRoot}/.vscode/
+ * Last Modified: July 23, 2017
+ * Author:        DaDaMr_X <dadamrxx@gmail.com>
+ * Licence:       Copyright (c) 2017 DaDaMr_X
+ ******************************************************************************/
+{
+    "version": "0.1.0",
+    "windows": {
+        "command": "cmd",
+        "isShellCommand": true,
+        "args": ["/c"],
+        "tasks": [
+            {
+                "taskName": "compile",
+                "suppressTaskName": true,
+                "isBuildCommand": true,
+                "args": ["g++ ${fileBasename} && a.exe <in.txt && del a.exe"],
+                // "args": ["g++ ${fileBasename} && a.exe && del a.exe"],
+                "problemMatcher": {
+                    "owner": "cpp",
+                    "fileLocation": ["relative", "${workspaceRoot}"],
+                    "pattern": {
+                        "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "severity": 4,
+                        "message": 5
+                    }
+                }
+            },
+            {
+                "taskName": "compile-g",
+                "suppressTaskName": true,
+                "args": ["g++ ${fileBasename} -g"]
+            }
+        ]
+    },
+    "linux": {
+        "command": "bash",
+        "isShellCommand": true,
+        "args": ["-c"],
+        "tasks": [
+            {
+                "taskName": "compile",
+                "suppressTaskName": true,
+                "isBuildCommand": true,
+                "args": ["g++ ${fileBasename} && ./a.out <in.txt && rm ./a.out"],
+                "problemMatcher": {
+                    "owner": "cpp",
+                    "fileLocation": ["relative", "${workspaceRoot}"],
+                    "pattern": {
+                        "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "severity": 4,
+                        "message": 5
+                    }
+                }
+            },
+            {
+                "taskName": "compile-g",
+                "suppressTaskName": true,
+                "args": ["g++ ${fileBasename} -g"]
+            }
+        ]
+    } 
+}
